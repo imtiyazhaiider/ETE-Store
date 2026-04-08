@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row align-items-center">
+
+    <!-- IMAGE -->
+    <div class="col-md-6" data-aos="fade-right">
+        <div class="product-image-container">
+            <img src="{{ url_for('static', filename=product.image) }}" class="img-fluid product-image">
+        </div>
+    </div>
+
+    <!-- DETAILS -->
+    <div class="col-md-6" data-aos="fade-left">
+
+        <h1 class="fw-bold mb-3">{{ product.name }}</h1>
+
+        <p class="text-secondary mb-4">
+            {{ product.description }}
+        </p>
+
+        <h2 class="price mb-4">₹{{ product.price }}</h2>
+
+        <a href="/cart/add/{{ product.id }}" class="btn btn-lg btn-buy">
+            Add to Cart
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

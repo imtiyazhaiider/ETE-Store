@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Your Orders</h2>
+
+{% if orders %}
+
+    {% for data in orders %}
+    <div class="card bg-black text-light border-secondary mb-4 p-3">
+
+        <h5>Order ID: {{ data.order.id }}</h5>
+        <p>Total: ₹{{ data.order.total_price }}</p>
+        <p class="text-secondary">Address: {{ data.order.address }}</p>
+
+        <hr>
+
+        {% for item in data.order_items %}
+            <p>
+                {{ item.name }} — ₹{{ item.price }} × {{ item.quantity }}
+            </p>
+        {% endfor %}
+
+    </div>
+    {% endfor %}
+
+{% else %}
+    <p>No orders yet</p>
+{% endif %}
+
+{% endblock %}

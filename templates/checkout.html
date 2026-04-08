@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Checkout</h2>
+
+<form method="POST">
+    <textarea name="address" placeholder="Enter your address" class="form-control mb-3" required></textarea>
+
+    <button class="btn btn-outline-light">Place Order</button>
+</form>
+
+{% endblock %}
