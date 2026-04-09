@@ -57,3 +57,17 @@ if __name__ == "__main__":
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
+@app.route('/make-admin')
+def make_admin():
+    from models import User
+    from extensions import db
+
+    user = User.query.filter_by(email="imtiyazhaider00@gmail.com").first()
+
+    if user:
+        user.is_admin = True
+        db.session.commit()
+        return "Admin created successfully!"
+
+    return "User not found"

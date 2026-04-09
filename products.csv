@@ -1,6 +1,100 @@
 name,price,description,image
-Laptop,50000,High performance laptop,images/laptop.jpg
-Phone,20000,Smartphone,images/phone.jpg
-Headphones,2000,Noise cancelling headphones,images/headphones.jpg
-Keyboard,1500,Mechanical keyboard,images/keyboard.jpg
-Notebook,20,A notebook,images/notebook.jpg
+Laptop Pro X,75000,High performance laptop,images/laptop.jpg
+Gaming Laptop Z,95000,Powerful gaming laptop,images/laptop.jpg
+Budget Laptop,35000,Affordable laptop,images/laptop.jpg
+Smartphone X,25000,Latest smartphone,images/phone.jpg
+Smartphone Lite,15000,Budget smartphone,images/phone.jpg
+Smartphone Pro Max,60000,Flagship phone,images/phone.jpg
+Wireless Headphones,3000,Noise cancelling headphones,images/headphones.jpg
+Gaming Headset,4500,RGB gaming headset,images/headphones.jpg
+Bluetooth Earbuds,2000,Compact earbuds,images/headphones.jpg
+Mechanical Keyboard,4000,RGB mechanical keyboard,images/keyboard.jpg
+Office Keyboard,1200,Simple keyboard,images/keyboard.jpg
+Gaming Mouse,2500,High DPI mouse,images/keyboard.jpg
+Office Mouse,800,Basic mouse,images/keyboard.jpg
+Notebook Classic,50,Daily notebook,images/notebook.jpg
+Premium Notebook,120,High quality notebook,images/notebook.jpg
+Spiral Notebook,80,Spiral bound notebook,images/notebook.jpg
+Backpack Pro,2000,Durable backpack,images/bag.jpg
+Travel Backpack,3000,Large capacity bag,images/bag.jpg
+School Bag,1200,Student backpack,images/bag.jpg
+Water Bottle Steel,500,Insulated bottle,images/bottle.jpg
+Water Bottle Plastic,200,Lightweight bottle,images/bottle.jpg
+Smart Watch,5000,Fitness smartwatch,images/watch.jpg
+Luxury Watch,15000,Premium watch,images/watch.jpg
+Digital Watch,2000,Sport watch,images/watch.jpg
+Power Bank 10000mAh,1500,Portable charger,images/powerbank.jpg
+Power Bank 20000mAh,2500,High capacity charger,images/powerbank.jpg
+USB Cable Type-C,300,Fast charging cable,images/cable.jpg
+USB Cable Lightning,400,Apple compatible cable,images/cable.jpg
+Laptop Stand,1200,Ergonomic stand,images/stand.jpg
+Phone Stand,500,Adjustable stand,images/stand.jpg
+LED Desk Lamp,1500,Modern desk lamp,images/lamp.jpg
+Study Lamp,800,Reading lamp,images/lamp.jpg
+Office Chair,7000,Ergonomic chair,images/chair.jpg
+Gaming Chair,12000,Comfort gaming chair,images/chair.jpg
+Tablet Pro,30000,High performance tablet,images/tablet.jpg
+Tablet Lite,15000,Budget tablet,images/tablet.jpg
+External Hard Drive 1TB,4000,Portable storage,images/harddrive.jpg
+External Hard Drive 2TB,6000,High storage,images/harddrive.jpg
+Pen Set,300,Premium pens,images/pen.jpg
+Marker Pack,200,Color markers,images/pen.jpg
+Printer Ink,1500,Ink cartridge,images/printer.jpg
+Laser Printer,12000,Office printer,images/printer.jpg
+Monitor 24inch,10000,HD monitor,images/monitor.jpg
+Monitor 27inch,18000,Full HD monitor,images/monitor.jpg
+HDMI Cable,500,High speed cable,images/cable.jpg
+Router WiFi,2500,Wireless router,images/router.jpg
+Gaming Router,7000,High speed router,images/router.jpg
+Speaker Bluetooth,3000,Portable speaker,images/speaker.jpg
+Home Theater,15000,Surround sound system,images/speaker.jpg
+Desk Organizer,600,Organize desk items,images/desk.jpg
+Wall Clock,1200,Modern clock,images/clock.jpg
+Alarm Clock,800,Loud alarm clock,images/clock.jpg
+Calculator Basic,400,Simple calculator,images/calculator.jpg
+Scientific Calculator,1500,Advanced calculator,images/calculator.jpg
+Camera DSLR,55000,Professional camera,images/camera.jpg
+Action Camera,15000,Sports camera,images/camera.jpg
+Tripod Stand,1200,Camera tripod,images/tripod.jpg
+Ring Light,1800,Lighting setup,images/light.jpg
+Microphone USB,2500,Recording mic,images/mic.jpg
+Gaming Console,45000,Next gen console,images/console.jpg
+VR Headset,30000,Virtual reality headset,images/vr.jpg
+Smart TV 43inch,30000,LED smart TV,images/tv.jpg
+Smart TV 55inch,50000,4K TV,images/tv.jpg
+Electric Kettle,1200,Fast boiling kettle,images/kettle.jpg
+Mixer Grinder,3000,Kitchen appliance,images/mixer.jpg
+Air Fryer,7000,Healthy cooking,images/airfryer.jpg
+Coffee Maker,5000,Brew coffee easily,images/coffee.jpg
+Blender,2500,Smoothie blender,images/blender.jpg
+Toaster,1500,Bread toaster,images/toaster.jpg
+Iron Box,2000,Clothes iron,images/iron.jpg
+Hair Dryer,1500,Quick dry hair,images/hairdryer.jpg
+Trimmer,2000,Beard trimmer,images/trimmer.jpg
+Electric Toothbrush,3000,Smart brush,images/toothbrush.jpg
+Shoes Running,3000,Comfort running shoes,images/shoes.jpg
+Shoes Casual,2500,Everyday shoes,images/shoes.jpg
+Sandals,1500,Comfort sandals,images/shoes.jpg
+T-Shirt Basic,800,Cotton t-shirt,images/tshirt.jpg
+T-Shirt Premium,1500,Stylish t-shirt,images/tshirt.jpg
+Jeans Regular,2000,Denim jeans,images/jeans.jpg
+Jeans Slim Fit,2500,Modern jeans,images/jeans.jpg
+Jacket Winter,4000,Warm jacket,images/jacket.jpg
+Hoodie,2500,Casual hoodie,images/jacket.jpg
+Cap,500,Stylish cap,images/cap.jpg
+Sunglasses,1200,UV protection,images/glasses.jpg
+Wallet Leather,1500,Premium wallet,images/wallet.jpg
+Handbag,3000,Stylish bag,images/bag.jpg
+Perfume,2000,Long lasting fragrance,images/perfume.jpg
+Deodorant,500,Daily freshness,images/perfume.jpg
+Face Wash,300,Skin care,images/skincare.jpg
+Moisturizer,600,Hydration cream,images/skincare.jpg
+Shampoo,400,Hair care shampoo,images/skincare.jpg
+Conditioner,400,Smooth hair,images/skincare.jpg
+Protein Powder,2500,Fitness supplement,images/protein.jpg
+Yoga Mat,1200,Workout mat,images/yoga.jpg
+Dumbbells Set,3000,Home workout,images/dumbbell.jpg
+Treadmill,25000,Cardio machine,images/treadmill.jpg
+Football,800,Sports ball,images/ball.jpg
+Cricket Bat,2000,Wooden bat,images/bat.jpg
+Badminton Racket,1500,Sports racket,images/racket.jpg
