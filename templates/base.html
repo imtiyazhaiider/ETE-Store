@@ -75,6 +75,21 @@ document.querySelectorAll('.card').forEach(card => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".card").forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(15px)";
+        
+        setTimeout(() => {
+            card.style.transition = "all 0.4s ease";
+            card.style.opacity = 1;
+            card.style.transform = "translateY(0)";
+        }, i * 80);
+    });
+});
+</script>
+
 <style>
 .ripple {
     position: absolute;
