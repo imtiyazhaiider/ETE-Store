@@ -32,9 +32,11 @@
 
         <!-- SEARCH -->
          <form action="/" method="GET" class="search-box">
-            <input type="text" name="search" placeholder="Search products..." />
-            <button type="submit">Search</button>
-        </form>
+    <div class="search-wrapper">
+        <input type="text" name="search" placeholder="Search products..." />
+        <button type="submit">Search</button>
+    </div>
+</form>
 
         <!-- LINKS -->
         <div>
@@ -103,6 +105,40 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("show");
         }, index * 100); // stagger effect
     });
+});
+</script>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = -(y - centerY) / 10;
+        const rotateY = (x - centerX) / 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+    });
+});
+</script>
+
+<div class="cursor-glow"></div>
+
+<script>
+document.addEventListener("mousemove", (e) => {
+    const glow = document.querySelector(".cursor-glow");
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
 });
 </script>
 

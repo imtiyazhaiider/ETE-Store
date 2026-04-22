@@ -81,6 +81,10 @@ h1 {
     font-size: 18px;
 }
 
+.card {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease;
+}
 .card p {
     color: #94a3b8;
     font-size: 14px;
@@ -179,4 +183,91 @@ h1 {
         radial-gradient(1px 1px at 50% 60%, white, transparent);
 
     opacity: 0.3;
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+
+    background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 70%);
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+}
+
+/* SEARCH WRAPPER */
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 🔥 ROLLER LIGHT EFFECT */
+.search-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(56,189,248,0.4),
+        transparent
+    );
+
+    animation: roller 3s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes roller {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* INPUT */
+.search-wrapper input {
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.05);
+    color: #e2e8f0;
+
+    width: 200px;
+    z-index: 1;
+}
+
+/* BUTTON */
+.search-wrapper button {
+    padding: 10px 14px;
+    border: none;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 🔥 HOVER BOOST */
+.search-wrapper:hover::before {
+    animation-duration: 1.5s;
+}
+
+/* 🔥 FOCUS EFFECT */
+.search-wrapper input:focus {
+    width: 260px;
+    transition: 0.3s ease;
 }
