@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="margin:30px;">❤️ Your Wishlist</h1>
+
+{% if products %}
+
+<div class="products">
+    {% for product in products %}
+
+    <div class="card">
+
+        <img src="{{ url_for('static', filename=product.image) }}">
+
+        <div class="card-content">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <p class="price">₹{{ product.price }}</p>
+
+            <div class="card-actions">
+
+                <a href="{{ url_for('cart.add_to_cart', product_id=product.id) }}" class="btn">
+                    Add to Cart
+                </a>
+
+                <!-- ❌ REMOVE FROM WISHLIST -->
+                <a href="{{ url_for('wishlist.toggle_wishlist', product_id=product.id) }}"
+                   class="heart liked">
+                    &#10084;
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+{% else %}
+
+<p style="padding:30px;">No items in wishlist ❤️</p>
+
+{% endif %}
+
+{% endblock %}

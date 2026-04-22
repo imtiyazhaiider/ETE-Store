@@ -504,3 +504,35 @@ h1 {
     color: #ef4444;
     transform: scale(1.2);
 }
+
+/* ACTION ROW */
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* HEART BASE */
+.heart {
+    font-size: 22px;
+    text-decoration: none;
+
+    color: #94a3b8; /* default grey */
+    transition: 0.3s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HOVER */
+.heart:hover {
+    transform: scale(1.2);
+    color: #ef4444;
+}
+
+/* ❤️ ACTIVE (LIKED) */
+.heart.liked {
+    color: #ef4444;
+}

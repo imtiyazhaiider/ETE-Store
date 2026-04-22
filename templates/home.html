@@ -9,13 +9,6 @@
 
     <div class="card">
 
-        <!-- ❤️ WISHLIST ICON -->
-        <div class="wishlist-icon">
-            <a href="{{ url_for('wishlist.toggle_wishlist', product_id=product.id) }}">
-                ♥
-            </a>
-        </div>
-
         <img src="{{ url_for('static', filename=product.image) }}">
 
         <div class="card-content">
@@ -25,6 +18,14 @@
 
             <a href="{{ url_for('cart.add_to_cart', product_id=product.id) }}" class="btn">
                 Add to Cart
+            </a>
+
+
+
+            
+             <a href="{{ url_for('wishlist.toggle_wishlist', product_id=product.id) }}"
+               class="heart {% if product.id in wishlist_items %}liked{% endif %}">
+                &#10084;
             </a>
         </div>
 
