@@ -25,9 +25,43 @@ nav {
 }
 
 nav a {
+    position: relative;
     color: #e2e8f0;
-    margin-left: 15px;
     text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+/* ✨ UNDERLINE ANIMATION */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+nav a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* underline grows */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 💡 ACTIVE CLICK */
+nav a:active {
+    transform: scale(0.95);
 }
 
 /* TITLE */
