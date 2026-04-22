@@ -476,3 +476,31 @@ h1 {
     font-weight: bold;
     color: #38bdf8;
 }
+
+/* CARD MUST BE RELATIVE */
+.card {
+    position: relative;
+}
+
+/* ❤️ ICON POSITION */
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 10;
+}
+
+/* ICON STYLE */
+.wishlist-icon a {
+    font-size: 22px;
+    color: #94a3b8;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.wishlist-icon a:hover {
+    color: #ef4444;
+    transform: scale(1.2);
+}

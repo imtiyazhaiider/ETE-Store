@@ -6,8 +6,16 @@
 
 <div class="products">
     {% for product in products %}
-    
-    <div class="card reveal">
+
+    <div class="card">
+
+        <!-- ❤️ WISHLIST ICON -->
+        <div class="wishlist-icon">
+            <a href="{{ url_for('wishlist.toggle_wishlist', product_id=product.id) }}">
+                ♥
+            </a>
+        </div>
+
         <img src="{{ url_for('static', filename=product.image) }}">
 
         <div class="card-content">
@@ -19,6 +27,7 @@
                 Add to Cart
             </a>
         </div>
+
     </div>
 
     {% endfor %}

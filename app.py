@@ -3,6 +3,7 @@ from config import Config
 from extensions import db, login_manager
 from models import User, Product
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -31,7 +32,9 @@ def create_app():
     from routes.admin import admin
     from routes.cart import cart
     from routes.orders import orders   # ✅ IMPORTANT
-
+    from routes.wishlist import wishlist_bp
+    
+    app.register_blueprint(wishlist_bp)
     app.register_blueprint(auth)
     app.register_blueprint(admin)
     app.register_blueprint(cart)

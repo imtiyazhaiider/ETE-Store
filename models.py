@@ -27,3 +27,9 @@ class OrderItem(db.Model):
     order_id = db.Column(db.Integer)
     product_id = db.Column(db.Integer)
     quantity = db.Column(db.Integer)
+
+class Wishlist(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'))
