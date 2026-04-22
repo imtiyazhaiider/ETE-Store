@@ -4,28 +4,24 @@
 
 <h1>Products</h1>
 
-{% if products %}
-
 <div class="products">
     {% for product in products %}
-
+    
     <div class="card">
-        <img src="{{ url_for('static', filename=product.image) }}" alt="">
+        <img src="{{ url_for('static', filename=product.image) }}">
 
         <div class="card-content">
             <h3>{{ product.name }}</h3>
             <p>{{ product.description }}</p>
             <p class="price">₹{{ product.price }}</p>
 
-            <a href="/add-to-cart/{{ product.id }}" class="btn">Add to Cart</a>
+            <a href="{{ url_for('cart.add_to_cart', product_id=product.id) }}" class="btn">
+                Add to Cart
+            </a>
         </div>
     </div>
 
     {% endfor %}
 </div>
-
-{% else %}
-<p style="padding:30px;">No products found</p>
-{% endif %}
 
 {% endblock %}
