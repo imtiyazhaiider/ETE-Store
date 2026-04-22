@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -28,6 +29,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
     <div class="container">
 
+        {% if current_user.is_authenticated %}
+
+<div class="account-menu">
+    <div class="account-icon">
+        <i class="fa fa-user"></i>
+    </div>
+
+    <div class="dropdown">
+        <p>{{ current_user.username }}</p>
+        <a href="/orders">Orders</a>
+        <a href="/cart">Cart</a>
+        <a href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
+</div>
+
+{% else %}
+
+<a href="{{ url_for('auth.login') }}">Login</a>
+<a href="{{ url_for('auth.register') }}">Register</a>
+
+{% endif %}
         <a class="navbar-brand fw-bold" href="/">ETE Store</a>
 
         <!-- SEARCH -->
@@ -161,6 +183,25 @@ document.addEventListener("mousemove", (e) => {
     }
 }
 </style>
+
+<script>
+function revealOnScroll() {
+    const elements = document.querySelectorAll(".reveal");
+
+    elements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
 
 </body>
 </html>

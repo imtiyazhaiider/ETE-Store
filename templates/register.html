@@ -2,18 +2,23 @@
 
 {% block content %}
 
-<div class="container" style="max-width: 500px;">
-    <h2 class="mb-4">Register</h2>
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Create Account</h2>
 
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" class="form-control mb-3" required>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
 
-        <input type="email" name="email" placeholder="Email" class="form-control mb-3" required>
+            <button type="submit">Register</button>
+        </form>
 
-        <input type="password" name="password" placeholder="Password" class="form-control mb-3" required>
-
-        <button class="btn btn-outline-light w-100">Register</button>
-    </form>
+        <p>
+            Already have an account?
+            <a href="{{ url_for('auth.login') }}">Login</a>
+        </p>
+    </div>
 </div>
 
 {% endblock %}
