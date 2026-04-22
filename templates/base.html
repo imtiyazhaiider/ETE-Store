@@ -15,7 +15,10 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,9 +30,9 @@
         <a class="navbar-brand fw-bold" href="/">ETE Store</a>
 
         <!-- SEARCH -->
-        <form class="d-flex" action="/search" method="GET">
-            <input class="form-control me-2 search-input" type="search" name="q" placeholder="Search products...">
-            <button class="btn btn-outline-light">Search</button>
+         <form action="/" method="GET" class="search-box">
+            <input type="text" name="search" placeholder="Search products..." />
+            <button type="submit">Search</button>
         </form>
 
         <!-- LINKS -->
@@ -86,6 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.opacity = 1;
             card.style.transform = "translateY(0)";
         }, i * 80);
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, index * 100); // stagger effect
     });
 });
 </script>

@@ -4,11 +4,12 @@
 
 <h1>Products</h1>
 
+{% if products %}
+
 <div class="products">
     {% for product in products %}
-    
-    <div class="card" onclick="window.location.href='/product/{{ product.id }}'">
-        
+
+    <div class="card">
         <img src="{{ url_for('static', filename=product.image) }}" alt="">
 
         <div class="card-content">
@@ -22,5 +23,9 @@
 
     {% endfor %}
 </div>
+
+{% else %}
+<p style="padding:30px;">No products found</p>
+{% endif %}
 
 {% endblock %}
